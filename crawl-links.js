@@ -9,13 +9,13 @@ const filterLinks = (links, url, siteUrl) => {
 
   return links
     .map((href) =>
-      href.startsWith("#") ? `${pathname}${href}` : href.replace(origin, ""),
+      href.startsWith("#") ? `${pathname}${href}` : href.replace(origin, "")
     )
     .filter(
       (href, index, self) =>
         href.startsWith(basePath) &&
         href !== basePath &&
-        self.indexOf(href) === index,
+        self.indexOf(href) === index
     );
 };
 
@@ -76,10 +76,11 @@ const parseRedirects = (configPath) => {
         redirect.source,
         parse(redirect.destination).pathname,
       ],
-      [],
+      []
     );
   } catch (e) {
     console.error(`Error reading redirects from ${configPath}: ${e.message}`);
+    return [];
   }
 };
 
