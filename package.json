@@ -1,0 +1,12 @@
+{
+  "name": "victory-docs-link-crawler",
+  "version": "1.0.0",
+  "main": "crawl-links.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": "Recursively crawls links in new and old sites and generates a list of broken or missing links",
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}
