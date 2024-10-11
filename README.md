@@ -10,7 +10,7 @@ npm ci
 
 ## Invocation
 
-- Accepts the following parameters: <original url> <new url> [vercel.json path]
+- Accepts the following parameters: `original url` `new url` `[vercel.json path]`
 
 Example:
 
