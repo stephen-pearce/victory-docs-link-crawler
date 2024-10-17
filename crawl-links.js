@@ -93,6 +93,12 @@ const diff = async (originalSite, newSite, redirects) => {
     missing.delete(link);
   }
 
+  for (const link of missing) {
+    if (link.includes("#") && redirects.includes(link.replace(/#.*$/, ""))) {
+      missing.delete(link);
+    }
+  }
+
   if (!missing.size && !broken.size) {
     console.log("\nNo missing/broken links found");
   } else {
